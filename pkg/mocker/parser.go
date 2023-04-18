@@ -54,6 +54,7 @@ func ParseFile(source string) (*Package, error) {
 	cfg := &packages.Config{Mode: packages.NeedSyntax | packages.NeedName, Tests: true}
 	pkgs, err := packages.Load(cfg, "file="+source)
 	if err != nil || packages.PrintErrors(pkgs) > 0 || len(pkgs) == 0 {
+        fmt.Println(err)
 		return nil, fmt.Errorf("loading packages failed")
 	}
 
