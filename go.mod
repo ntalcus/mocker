@@ -1,4 +1,4 @@
-module github.com/travisjeffery/mocker
+module github.com/ntalcus/mocker
 
 go 1.12
 
